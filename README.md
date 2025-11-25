@@ -44,15 +44,6 @@ Implements a FIFO queue using a singly-linked list to manage processes waiting f
 
 ## Building the Project
 
-### Current Method
-
-The project currently includes `.c` files directly in `main.c`. To build:
-
-```bash
-gcc main.c -o process-sim
-./process-sim
-```
-
 ### Recommended Method (Separate Compilation)
 
 For better maintainability and build performance:
@@ -68,15 +59,6 @@ gcc -c process.c -o process.o
 gcc -c ready-queue.c -o ready-queue.o
 gcc -c main.c -o main.o
 gcc process.o ready-queue.o main.o -o process-sim
-```
-
-### Using Make (Recommended)
-
-A Makefile can be added for automated builds:
-
-```bash
-make        # Build the project
-make clean  # Remove build artifacts
 ```
 
 ## Current Functionality
