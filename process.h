@@ -4,7 +4,6 @@
 
 typedef struct process {
 	unsigned int pid;
-	int memory_given;
 } process;
 
 int init_process(process *p, unsigned int pid);
