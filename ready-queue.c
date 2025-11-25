@@ -1,4 +1,6 @@
 #include "ready-queue.h"
+#include <stdio.h>
+#include <stdlib.h>
 
 void init_queue(queue *q) {
 	q->tail = NULL;
@@ -12,7 +14,7 @@ void free_queue(queue *q) {
 		q->head = q->head->next;
 		free(tmp);
 	}
-	q->t = NULL;
+	q->tail = NULL;
 }
 
 int enqueue(queue *q, process p) {
@@ -36,7 +38,7 @@ int dequeue(queue *q, process *p) {
 		return -1;
 	}
 
-	*process = q->tail->data;
+	*p = q->tail->data;
 	node *tmp = q->head;
 	q->head = q->head->next;
 	if (q->head == NULL) {
