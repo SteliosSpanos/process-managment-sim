@@ -3,7 +3,7 @@ CFLAGS = -Wall -Wextra -std=c11 -g
 TARGET = process-sim
 
 
-SRCS = main.c process.c ready-queue.c
+SRCS = main.c process.c ready-queue.c scheduler.c
 OBJS = $(SRCS:.c=.o)
 
 all: $(TARGET)
