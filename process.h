@@ -7,7 +7,7 @@ typedef enum {
 	READY,
 	WAITING,
 	TERMINATED
-} peocess_state;
+} process_state;
 
 
 typedef struct process {
