@@ -5,6 +5,7 @@
 typedef enum {
 	NEW,
 	READY,
+	RUNNING,
 	WAITING,
 	TERMINATED
 } process_state;
